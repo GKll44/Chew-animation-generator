@@ -129,6 +129,10 @@ fileCookie.onchange = async (ev) => {
 
 function drawCookieBase() {
   cookieCtx.imageSmoothingEnabled = false;
+
+  // ✅ 关键修复：先清空离屏 canvas，避免上一张贴图的像素残留
+  cookieCtx.clearRect(0, 0, cookieCanvas.width, cookieCanvas.height);
+
   if (cookieImg) {
     cookieCtx.drawImage(cookieImg, 0, 0, 120, 120);
   } else {
