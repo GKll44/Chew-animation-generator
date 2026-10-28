@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>我TM嚼嚼嚼！！</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/gif.js@0.2.0/dist/gif.js"></script>
+  </head>
+
+  <body>
+	<div id="controls">
+	  <h1>嚼嚼嚼</h1><p>
+	  <label>咀嚼幅度：<input type="range" id="amp" min="0" max="20" value="8" /></label>
+	  <label>咀嚼速度：<input type="range" id="speed" min="150" max="600" value="300" /></label>
+	  <label>咬痕 X：<input type="range" id="biteX" min="-120" max="120" value="10" /></label>
+	  <label>咬痕 Y：<input type="range" id="biteY" min="-120" max="120" value="10" /></label>
+
+	  <!-- 新增：人物偏移 -->
+	  <label>人物偏移 X：<input type="range" id="personX" min="-120" max="120" value="0" /></label>
+	  <label>人物偏移 Y：<input type="range" id="personY" min="-120" max="120" value="0" /></label>
+
+	  <!-- 新增：嘴巴偏移 -->
+	  <label>嘴巴偏移 X：<input type="range" id="mouthX" min="-120" max="120" value="0" /></label>
+	  <label>嘴巴偏移 Y：<input type="range" id="mouthY" min="-120" max="120" value="0" /></label>
+
+	  <!-- 新增：饼干偏移 -->
+	  <label>食物偏移 X：<input type="range" id="cookieX" min="-120" max="120" value="0" /></label>
+	  <label>食物偏移 Y：<input type="range" id="cookieY" min="-120" max="120" value="0" /></label>
+
+	  <label>人物图：<input type="file" id="imgPerson" accept="image/*" /></label>
+	  <label>嘴巴图：<input type="file" id="imgMouth" accept="image/*" /></label>
+	  <label>食物图：<input type="file" id="imgCookie" accept="image/*" /></label>
+	  <button id="exportGif">导出 GIF</button>
+	</div>
+
+	<canvas id="canvas" width="240" height="240"></canvas>
+
+	<script src="main.js"></script>
+  </body>
+</html>
